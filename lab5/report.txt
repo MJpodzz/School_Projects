@@ -1,0 +1,48 @@
+Mahmoud Hafez (mhafez)
+report.txt
+Lab 5: Report on mysayings.c Program
+
+The mysayings.c program is a simple, console-based application designed to manage a collection of memorable sayings. Users can interact with the program to perform operations such as loading sayings from a file, adding new sayings, searching for sayings containing specific substrings, displaying all sayings, and saving the current collection of sayings to a new file.
+---------------------------------------------------
+
+[1] User Perspective
+--------------------
+
+From the user's standpoint, interacting with the program is straightforward and guided by clear prompts:
+a) Startup: Upon launching the program, the user is prompted to enter the name of a "startup" data file. This file should contain initial sayings to load into the program. If the file does not exist, the program notifies the user and exits.
+
+b) Main Menu: Once the initial sayings are loaded, the program displays a menu with five options:
+
+i)   Display all sayings currently in the database.
+ii)  Enter a new saying into the database.
+iii) List sayings that contain a given substring entered by the user.
+iv)  Save all sayings in a new text file.
+v)   Quit the program.
+
+c) Operations: Users select an option by entering the corresponding number. The program then prompts the user for any additional information required to complete the selected operation.
+
+d) Quitting: To exit the program, the user selects the "quit" option from the main menu.
+---------------------------------------------------
+
+[2] Internal Workings
+---------------------
+
+The program is structured around a 2D char array, which serves as the database for storing sayings. Each saying is limited to 256 characters, and the program can accommodate up to 50 sayings. Here's a breakdown of the internal operations:
+
+a) Loading Sayings: Upon startup, the program attempts to open the specified startup file and reads each line into the 2D char array, trimming newline characters.
+b) Adding a Saying: When the user opts to add a new saying, the program checks if there is space available in the array and prompts the user to enter the saying.
+c) Searching: For substring searches, the program iterates through all sayings and uses the strstr function to identify matches.
+d) Displaying Sayings: The program loops through the array, printing each saying to the console.
+e) Saving Sayings: On user request, the program writes all sayings to a new file, each on its own line.
+---------------------------------------------------
+
+[3] Verification of Correctness
+-------------------------------
+
+The program was tested to ensure correct operation and handling of edge cases:
+
+a) File Non-existence: Attempting to start the program with a nonexistent file correctly results in an error message and termination.
+b) Full Database: Trying to add a new saying when the database is full prompts an appropriate message.
+c) Substring Searching: Searches were conducted with various substrings, including those that should yield multiple matches, single matches, and no matches, to verify the search functionality.
+d) Saving: The contents of a newly saved file were manually verified to ensure that all sayings were correctly saved and matched the current state of the program's database.
+---------------------------------------------------

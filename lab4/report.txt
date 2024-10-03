@@ -1,0 +1,49 @@
+Mahmoud Hafez
+report.txt
+Lab Report: ND Football Program
+
+Lab 4 Part 3: User Interface and Internal Functioning
+
+-------------------------------------------------------------------
+1. User Perspective:
+
+From the user's viewpoint, the Notre Dame Football program is a straightforward and interactive application. Upon execution, the user is greeted with a menu offering various options from 1 to 6 to query the historical win/loss data of the Notre Dame football team. The menu presents options such as:
+
+	1-Displaying the record for a given year.
+	2-Showing years with at least a specified number of losses.
+	3-Showing years with at least a specified number of wins.
+	4-Displaying years with winning streaks.
+	5-Displaying years with no losses.
+	6-Exiting the program.
+
+When the user selects an option, they are prompted to enter relevant information (like a specific year, or a minimum number of wins/losses). The program then displays the results based on the user's query. For instance, if the user asks for years with at least 10 wins, the program lists all the years meeting that criterion. The interface is user-friendly, providing clear instructions and easy navigation.
+
+-------------------------------------------------------------------
+2. Internal Working:
+
+Internally, the program relies on two primary data arrays - wins[] and losses[], each representing the number of wins and losses for Notre Dame football from 1900 onwards. The program calculates the year by adding the array index to 1900.
+
+Each menu option triggers a specific function:
+
+displayRecordForYear(int year): Searches for a specific year's record in the arrays.
+displayYearsWithMinLosses(int minLosses): Iterates through the losses array to find years meeting the minimum losses criterion.
+displayYearsWithMinWins(int minWins): Similar to the above but for wins.
+displayWinningStreaks(): Identifies consecutive years where wins outnumber losses.
+displayYearsWithNoLosses(): Finds years with zero losses.
+These functions use loops and conditional statements to process the data and generate outputs corresponding to the user's query.
+
+-------------------------------------------------------------------
+3. Verification of Output Correctness:
+
+To verify the correctness of the program's output, multiple tests were conducted:
+
+Unit Testing: Each function was tested individually with known inputs to ensure it behaves as expected. For instance, displayRecordForYear(2012) was tested to confirm it outputs "Wins: 12, Losses: 1".
+Boundary Testing: The program was tested with edge cases, such as the earliest and latest years in the dataset, to ensure it handles such scenarios without errors.
+Data Consistency Check: The output for each function was cross-referenced with the actual historical data of Notre Dame football to ensure accuracy.
+User Input Validation: Tested the program's response to invalid inputs (like a non-existent year or negative numbers) to ensure it handles errors gracefully.
+Through these tests, the program demonstrated accurate and consistent performance, affirming the reliability of its outputs.
+
+
+
+
+

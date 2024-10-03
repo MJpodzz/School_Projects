@@ -1,0 +1,71 @@
+Mahmoud Hafez
+report.txt
+Lab6: PlayLife
+Report for Conway's Game of Life Implementation
+-----------------------------------------------------------------
+
+[1] User Interaction:
+
+A) Starting the Program
+Users can start the program in two modes:
+	[i]Interactive Mode: 
+	Run without command-line arguments. This mode allows users to manually add or remove cells, advance the simulation step-by-step, or continuously play the simulation.
+
+	[i] Batch Mode: 
+	Run with a file name as a command-line argument. The program reads initial cell configurations from the file and starts the simulation in a continuous play mode.
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+
+B) Commands in Interactive Mode
+i\     Adding a Cell (a x y): Places a live cell at the specified coordinates.
+ii\    Removing a Cell (r x y): Removes a cell from the specified coordinates.
+iii\   Next Iteration (n): Advances the simulation by one generation.
+iv  \  Continuous Play (p): Continuously runs the simulation until manually stopped.
+v    \ Quit (q): Exits the program.
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+
+C) Input File for Batch Mode
+The input file should contain a series of commands to add cells, followed by a "p" command for continuous play. Each command must be on a new line.
+-----------------------------------------------------------------
+
+[2] Program Internals:
+
+A) Structure
+The program is structured into three main files:
+
+- playlife.c: The main driver that handles user input and modes of operation.
+- lifefunc.c: Contains functions for manipulating the game state, including initializing the board, adding/removing cells, counting neighbors, and advancing the simulation.
+- playfunc.c: Implements functionalities specific to running interactive and batch modes, processing user commands, and managing the simulation flow.
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+
+B) Data Representation
+The game board is represented as a 2D array of characters, where each cell can be either 'X' (live) or ' ' (dead). The board size is set to a 40x40 grid, encapsulated by a visual border that does not interfere with the game's logic.
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+
+C) Game Logic
+Initialization: The board is initialized to all dead cells.
+User Commands: In interactive mode, user commands are processed to modify the board or control the simulation.
+Simulation Step: To advance the simulation, the program calculates the next state of each cell based on the number of live neighbors and updates the board accordingly.
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+
+D) Double Buffering
+To ensure accurate simulation, the program uses a double buffering technique, where changes to the state are applied to a temporary board, which is then copied back to the main board once all updates are complete.
+
+-----------------------------------------------------------------
+
+[3] Verification of Correctness:
+
+A) Testing Strategy
+1- Unit Testing: Individual functions, especially those calculating next states and neighbor counts, were tested with predefined patterns known to produce specific outcomes.
+2- Scenario Testing: The program was tested with well-known patterns like still lifes, oscillators, and spaceships to ensure they evolve as expected.
+3- Boundary Conditions: Edge cases, especially at the borders of the grid, were tested to ensure rules apply correctly without causing errors.
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+
+B) Known Patterns
+Patterns like the Block, Beehive, Blinker, and Glider were used as benchmarks, as their behavior in the Game of Life is well-documented and predictable. Matching the program's output with expected outcomes served as a primary means of verifying correctness.
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+
+C) Continuous Play and Stability
+In continuous play, the program was observed for stability and performance, ensuring it can run extensive simulations without crashing or exhibiting unexpected behavior.
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+
+End of Text! Thank you for Grading!

@@ -1,0 +1,23 @@
+Football Score Calculator Program (prog1.c):
+
+The Football Score Calculator, implemented in prog1.c, is a simple yet functional program designed to calculate the total score in a football game. Upon execution, the program starts by including the stdio.h header file, which is essential for input-output operations such as printing to the console and reading user input. The program then declares a set of integer variables to store the counts of touchdowns, extra points, field goals, and safeties, along with a variable to hold the total score.
+
+The user interaction begins with the program prompting the user to enter the number of touchdowns, extra points, field goals, and safeties. These inputs are read using the scanf function and stored in their respective variables. Following the input phase, the program proceeds to calculate the total score. This calculation is based on the standard scoring rules in football: touchdowns contribute 6 points each, extra points add 1 point each, field goals are 3 points each, and safeties are valued at 2 points each. The program sums these values to arrive at the total score.
+
+Finally, the total score is displayed to the user using the printf function. With this output, the program completes its execution, having successfully calculated and presented the total football game score based on the user's input.
+
+--------------------------------------------------------------------
+
+Power Dissipation in a Resistor Program (prog2.c):
+
+In the prog2.c program, the focus is on calculating the power dissipated in a resistor, a fundamental concept in electrical engineering. The program commences with the inclusion of two critical header files: stdio.h for basic input and output functions, and math.h, which provides access to advanced mathematical functions, notably the pow function used for calculating power.
+
+The program defines three double-type variables to accurately capture and process the decimal values for voltage, resistance, and the resultant power. The user is then prompted to input the voltage across the resistor and its resistance, which the program reads through the scanf function and stores in the designated variables. The core calculation of the program utilizes the formula P = V^2 / R, where P represents power, V is voltage, and R stands for resistance. To achieve this, the program first squares the voltage value using the pow function and then divides this by the resistance.
+
+Once the power calculation is complete, the result is presented to the user in watts, facilitated by the printf function. This marks the end of the program's operation, having successfully computed and displayed the power dissipation in a resistor based on the user-provided voltage and resistance values.
+
+-----------------------------------------------------------------
+
+
+
+

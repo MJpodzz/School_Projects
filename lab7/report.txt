@@ -1,0 +1,40 @@
+Mahmoud Hafez
+report.txt
+Lab7 Part2: US States and Capitals
+Report on the US States Educational Tool Program
+............................................................
+
+User Perspective:
+-----------------
+The program starts by asking the user to enter the name of a data file containing information about US states. Once the file is loaded, the program displays a menu with several options:
+
+1. List all states - Displays information for all states, including name, abbreviation, capital, and the year they joined the union.
+2. Find state info by abbreviation - Prompts the user to enter a state abbreviation and displays detailed information for the specified state.
+3. Find capital info by state name or abbreviation - Allows the user to find the capital of a state by entering either the state's name or abbreviation.
+4. List states by year - Users can list states that joined the union in a specific year or earlier.
+5. Exit - Ends the program.
+
+After selecting an option and viewing the output, the menu is displayed again, allowing the user to perform more actions until they choose to exit the program. If the user inputs a number not listed in the menu, the program displays an error message and shows the menu again for the user to make a valid choice.
+
+How the Program Works Internally:
+---------------------------------
+The program defines a `State` struct to store information about each state. It loads data from a specified CSV file into an array of `State` structs. Each menu option triggers a specific function:
+
+- `listAllStates` iterates through all states in the array, printing their details.
+- `findStateInfo` and `findCapitalInfo` search the array for a state matching the user's input and display relevant information.
+- `listStatesByYear` filters and displays states based on the year they joined the union.
+
+The program uses a loop to continuously display the menu and process user input until the exit option is selected. Functions to convert strings to uppercase ensure that comparisons are case-insensitive, accommodating varied user inputs.
+
+Verification of Output Correctness:
+-----------------------------------
+The program was tested with a variety of inputs to ensure correctness:
+
+- Known state abbreviations and names to verify that the correct state information is displayed.
+- Edge cases, such as entering lowercase abbreviations and names, to test case-insensitive handling.
+- Years, to ensure the program correctly lists states that joined the union in the specified year or earlier.
+- Invalid inputs, to check that the program handles errors gracefully and continues to operate.
+
+The output for each test case was compared against known data to verify accuracy. This process confirmed that the program functions as intended, providing an effective educational tool for learning about US states.
+
+

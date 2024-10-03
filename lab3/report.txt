@@ -1,0 +1,33 @@
+Mahmoud Hafez (mhafez)
+report.txt
+Lab 3 Report: Menu Calculator Program (Part 3)
+
+
+The final part of the assignment involved the development and analysis of a program named "menucalc.c". This program is designed to offer a simple, interactive menu-driven calculator that performs basic arithmetic operations such as addition, subtraction, multiplication, and division based on user input. This report provides a comprehensive overview of the program from a user perspective, its internal workings, and the verification process for its output correctness.
+
+User Perspective:
+From the user's standpoint, "menucalc.c" presents a straightforward and user-friendly interface. Upon execution, the program displays a menu of operations:
+
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Exit
+
+The user is prompted to select an option by entering the corresponding number. After choosing an operation (except for Exit), the user is then asked to input two numbers. The program calculates the result based on the selected operation and the provided inputs, then displays the outcome. If the user selects 'Exit', the program terminates.
+
+How the Program Works Internally:
+Internally, "menucalc.c" utilizes a switch-case statement to handle the user's operation choice. Depending on the selection, the program executes the respective arithmetic operation. The core functionality is broken down into functions for each operation - add(), subtract(), multiply(), and divide() - to maintain code modularity and readability. Error checking is implemented, especially for division, to prevent division by zero. User inputs are gathered using scanf() function calls, and results are displayed using printf().
+
+Error handling and input validation are critical aspects of the program's internal logic, ensuring that the user inputs are valid numbers and that the chosen operation is within the specified range (1-5). The program loops back to the menu after displaying a result, allowing for multiple calculations until the user opts to exit.
+
+Verification of Output Correctness:
+The output correctness of "menucalc.c" was verified through a series of test cases covering normal, boundary, and error conditions. These test cases included:
+
+- Performing each operation with positive and negative numbers
+- Testing division by zero to ensure proper error handling
+- Checking the response to invalid inputs (e.g., characters instead of numbers)
+- Verifying that the 'Exit' option terminates the program as expected
+
+Each test case was executed, and the outputs were compared against expected results. The program passed all test cases, demonstrating that it functions correctly across a range of input scenarios.
+
